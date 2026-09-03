@@ -16,20 +16,23 @@
                 border: 5px solid #483D8B;
       }
           main{
+              display:flex;
                background-color: #0E2641
                color: #CBA6E3
+               text-aling: center;
                 max-widtth: 800px;
                 margin: 0 auto;
+                gap: 20px;
                 padding: 16px;
                 display: flex;
           
           } 
           img{ 
-               width:80px;
-               height:80px;
+               width:180px;
+               height:180px;
           }
 
-          .artigo-autor{ 
+          div p{ 
                font-weight: bold;
           }
      </style>
@@ -62,19 +65,21 @@
 </body>
      <script> 
           const botoes = document. querySelectorAll("button");
+          
           botoes. forEach(function(botao) {
           botao.addEventListener("click",botaoClicado);
 
                function botaoClicado (){
                     console.log("fui clicado");
                     let texto = botao.querySelector("span");
+                    if (texto){
                     texto.textContent++;
                }
-               
+          }
                })
    
    
    
-   </main>
-  </body>
+   
+  </script>
 </html>
